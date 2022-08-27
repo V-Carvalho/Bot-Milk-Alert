@@ -2,7 +2,7 @@ import os
 import time
 import dotenv
 import asyncio
-from Processing import Processing
+from processing import Processing
 from playwright.async_api import async_playwright
 
 processing = Processing()
