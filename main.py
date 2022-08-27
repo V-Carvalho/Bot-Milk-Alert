@@ -14,7 +14,7 @@ while True:
     async def run(playwright):
         milk_list = []
         total_items_page = 30
-        url = os.getenv('URL_CARREFOUR')
+        url = os.getenv("URL_CARREFOUR")
 
         # Criando o navegador
         browser = await playwright.chromium.launch(headless=False)

@@ -8,7 +8,7 @@ class Notification:
 
     def send_message(self, message):
         try:
-            data = {'chat_id': os.getenv('CHAT_ID'), 'text': message}
+            data = {'chat_id': os.getenv("CHAT_ID"), 'text': message}
             url = f'https://api.telegram.org/bot{os.getenv("TOKEN_BOT")}/sendMessage'
             requests.post(url, data)
         except Exception as erro:
