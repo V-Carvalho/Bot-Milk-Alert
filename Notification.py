@@ -12,4 +12,4 @@ class Notification:
             url = f'https://api.telegram.org/bot{os.getenv("TOKEN_BOT")}/sendMessage'
             requests.post(url, data)
         except Exception as erro:
-            print("Erro no ao enviar notificação: ", erro)
+            print("Erro no ao enviar notificacao: ", erro)

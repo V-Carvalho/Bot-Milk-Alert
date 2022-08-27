@@ -24,7 +24,7 @@ while True:
         await page.goto(url)
         await page.wait_for_timeout(5000)
 
-        # Preenchendo o formulário da home
+        # Preenchendo o formulario da home
         try:
             await page.click('button:has-text("Receba em Casa")')
             await page.wait_for_timeout(5000)
@@ -41,7 +41,7 @@ while True:
         try:
             total_items_page = await page.inner_html('xpath=//*[@id="gatsby-focus-wrapper"]/div/div[4]/div[1]/div[3]/div/div[2]/div[3]/span')
         except Exception as erro:
-            print("Erro ao extrair total de items da página", erro)
+            print("Erro ao extrair total de items da pagina", erro)
 
         # Extraindo e formatando os dados da pagina
         try:
@@ -74,7 +74,7 @@ while True:
             # Passando os dados extraídos para a classe de processamento dos dados
             processing.data_processing(milk_list)
         except Exception as erro:
-            print("Erro ao extrair item da página: ", erro)
+            print("Erro ao extrair item da pagina: ", erro)
 
         # Fechando o navegador
         await browser.close()
