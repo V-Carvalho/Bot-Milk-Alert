@@ -17,7 +17,7 @@ while True:
         url = os.getenv("URL_CARREFOUR")
 
         # Criando o navegador
-        browser = await playwright.chromium.launch(headless=False)
+        browser = await playwright.chromium.launch(headless=True)
         # Criando uma nova pagina no browser
         page = await browser.new_page()
         # Abrindo url na pagina crianda
